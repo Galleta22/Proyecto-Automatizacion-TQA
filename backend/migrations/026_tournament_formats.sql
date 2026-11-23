@@ -1,0 +1,6 @@
+ALTER TABLE tournaments ADD COLUMN IF NOT EXISTS competition_format VARCHAR(20) NOT NULL DEFAULT 'individual';
+ALTER TABLE tournaments ADD COLUMN IF NOT EXISTS table_size INTEGER NOT NULL DEFAULT 4;
+ALTER TABLE tournaments ADD COLUMN IF NOT EXISTS team_size INTEGER NOT NULL DEFAULT 2;
+ALTER TABLE tournament_participants ADD COLUMN IF NOT EXISTS team_members JSON;
+ALTER TABLE tournament_matches ADD COLUMN IF NOT EXISTS table_entries JSON;
+ALTER TABLE tournament_matches ADD COLUMN IF NOT EXISTS placements JSON;

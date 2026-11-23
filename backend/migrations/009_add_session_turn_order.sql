@@ -1,0 +1,2 @@
+ALTER TABLE game_sessions ADD COLUMN IF NOT EXISTS turn_order JSON DEFAULT '[]'::json;
+ALTER TABLE game_sessions ADD COLUMN IF NOT EXISTS turn_order_enabled BOOLEAN NOT NULL DEFAULT FALSE;

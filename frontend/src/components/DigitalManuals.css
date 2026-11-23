@@ -1,0 +1,67 @@
+.digital-manuals { min-height: 62vh; color: var(--text-main); }
+.manuals-header { margin: 24px 0; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border: 1px solid var(--glass-border); background: var(--bg-card); border-radius: var(--radius); }
+.manuals-header span { color: var(--secondary); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+.manuals-header h2 { margin: 3px 0 6px; color: var(--text-main); font-size: 1.3rem; }
+.manuals-header p { margin: 0; color: var(--text-muted); font-size: 0.85rem; }
+.manual-upload-trigger, .manual-submit { min-height: 38px; padding: 8px 16px; display: inline-flex; align-items: center; gap: 7px; border-radius: var(--radius-sm); background: var(--primary); color: var(--ink); font-weight: 600; border: none; }
+.manual-upload-trigger:hover, .manual-submit:hover { background: var(--primary-hover); }
+.manual-upload-trigger svg, .manual-submit svg { width: 16px; }
+.manual-filters { margin-bottom: 18px; display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 10px; }
+.manual-filters label { position: relative; }
+.manual-filters label svg { position: absolute; top: 13px; left: 12px; width: 16px; color: var(--text-muted); }
+.manual-filters input, .manual-filters select { width: 100%; min-height: 42px; box-sizing: border-box; border: 1px solid var(--glass-border); border-radius: var(--radius-sm); background: var(--bg-body); color: var(--text-main); }
+.manual-filters input { padding-left: 38px; }
+.manual-game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
+.manual-game-card { border: 1px solid var(--glass-border); background: var(--bg-card); border-radius: var(--radius); overflow: hidden; }
+.manual-game-heading { min-height: 72px; padding: 12px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid var(--glass-border); }
+.manual-game-heading img { width: 50px; height: 50px; flex: 0 0 50px; object-fit: cover; border-radius: var(--radius-sm); }
+.manual-game-heading > div { width: 50px; height: 50px; flex: 0 0 50px; display: grid; place-items: center; background: var(--bg-body); border-radius: var(--radius-sm); color: var(--secondary); }
+.manual-game-heading h3 { margin: 2px 0 0; color: var(--text-main); font-size: 1rem; }
+.manual-game-heading small { color: var(--text-muted); font-size: 0.7rem; }
+.manual-list { display: grid; }
+.manual-row { min-width: 0; padding: 13px; display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 9px; align-items: start; border-bottom: 1px solid var(--glass-border); }
+.manual-row:last-child { border-bottom: 0; }
+.manual-row > svg { width: 20px; color: var(--secondary); }
+.manual-row strong, .manual-row span, .manual-row small { display: block; }
+.manual-row strong { color: var(--text-main); font-size: 0.85rem; }
+.manual-row span { margin-top: 4px; color: var(--text-muted); font-size: 0.7rem; }
+.manual-row small { margin-top: 3px; overflow: hidden; color: var(--text-muted); font-size: 0.65rem; text-overflow: ellipsis; white-space: nowrap; opacity: 0.7; }
+.manual-actions { display: flex; gap: 4px; }
+.manual-actions button { width: 32px; height: 32px; padding: 0; display: grid; place-items: center; border: 1px solid var(--glass-border); border-radius: var(--radius-sm); background: var(--bg-card); color: var(--text-muted); cursor: pointer; }
+.manual-actions button:hover { background: var(--bg-card-hover); color: var(--text-main); }
+.manual-actions svg { width: 15px; }
+.manual-actions .manual-delete { color: var(--danger); }
+.manual-empty { color: var(--text-muted); text-align: center; }
+.manual-empty-state { min-height: 260px; display: grid; place-content: center; color: var(--text-muted); text-align: center; padding: 48px 24px; }
+.manual-empty-state > svg { width: 48px; margin: 0 auto 12px; opacity: 0.3; }
+.manual-empty-state h3 { margin: 0; color: var(--text-main); font-size: 1.1rem; }
+.manual-empty-state p { margin: 7px 0 0; font-size: 0.85rem; }
+.manual-modal-backdrop { position: fixed; inset: 0; z-index: 5000; display: grid; place-items: center; background: rgba(4,10,18,.82); padding: 16px; backdrop-filter: blur(2px); }
+.manual-upload-modal { width: min(680px, 100%); max-height: calc(100dvh - 32px); display: flex; flex-direction: column; border: 1px solid var(--glass-border); border-radius: var(--radius); background: var(--bg-card); box-shadow: 0 24px 70px rgba(0,0,0,.55); overflow: hidden; }
+.manual-upload-modal header, .manual-upload-modal footer { padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.manual-upload-modal header { border-bottom: 1px solid var(--glass-border); flex-shrink: 0; }
+.manual-upload-modal header small { color: var(--secondary); font-size: 0.75rem; }
+.manual-upload-modal header h3 { margin: 0; color: var(--text-main); font-size: 1.1rem; }
+.manual-upload-modal header button { width: 32px; height: 32px; padding: 0; background: transparent; color: var(--text-muted); border: none; cursor: pointer; border-radius: 50%; display: grid; place-items: center; }
+.manual-upload-modal header button:hover { background: rgba(255,255,255,.06); color: var(--text-main); }
+.manual-upload-fields { padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.08) transparent; }
+.manual-upload-fields::-webkit-scrollbar { width: 6px; }
+.manual-upload-fields::-webkit-scrollbar-track { background: transparent; }
+.manual-upload-fields::-webkit-scrollbar-thumb { background: rgba(255,255,255,.1); border-radius: 4px; }
+.manual-upload-fields label { display: grid; gap: 6px; color: var(--text-muted); font-size: 0.75rem; }
+.manual-upload-fields input, .manual-upload-fields select { width: 100%; min-height: 40px; box-sizing: border-box; border: 1px solid var(--glass-border); border-radius: var(--radius-sm); background: var(--bg-body); color: var(--text-main); }
+.manual-upload-fields label:nth-child(2), .manual-file-field { grid-column: 1 / -1; }
+.manual-file-field { min-height: 88px; padding: 14px; display: flex !important; gap: 12px; align-items: center; border: 1px dashed var(--glass-border); background: var(--bg-body); border-radius: var(--radius-sm); cursor: pointer; }
+.manual-file-field > svg { width: 25px; color: var(--secondary); flex-shrink: 0; }
+.manual-file-field strong, .manual-file-field small { display: block; }
+.manual-file-field small { margin-top: 4px; color: var(--text-muted); font-size: 0.75rem; }
+.manual-file-field input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.manual-upload-modal footer { justify-content: flex-end; border-top: 1px solid var(--glass-border); flex-shrink: 0; }
+.manual-upload-modal footer button { min-height: 36px; padding: 6px 16px; border-radius: var(--radius-sm); }
+@media (max-width: 650px) {
+  .manuals-header { align-items: flex-start; flex-direction: column; }
+  .manual-filters, .manual-upload-fields { grid-template-columns: 1fr; }
+  .manual-upload-fields label:nth-child(2), .manual-file-field { grid-column: 1; }
+  .manual-game-grid { grid-template-columns: minmax(0, 1fr); }
+  .manual-modal-backdrop { padding: 10px; }
+}

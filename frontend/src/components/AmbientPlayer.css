@@ -1,0 +1,13 @@
+.ambient-presets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; padding: 8px; }
+.ambient-preset-btn { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 6px; border: 1px solid #2f3c50; border-radius: 8px; background: rgba(22,36,56,.6); color: var(--ink); cursor: pointer; font-size: 10px; transition: all .2s; position: relative; }
+.ambient-preset-btn:hover { border-color: var(--accent); background: rgba(28,46,69,.8); }
+.ambient-preset-btn.active { border-color: var(--accent); background: rgba(52,120,229,.15); color: var(--ink); }
+.ambient-preset-btn svg { width: 20px; height: 20px; color: var(--accent); }
+.ambient-preset-btn span { white-space: nowrap; }
+.ambient-playing-dot { position: absolute; top: 4px; right: 4px; width: 6px; height: 6px; border-radius: 50%; background: #22c55e; animation: ambient-pulse 1s infinite; }
+@keyframes ambient-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+.ambient-controls { display: flex; align-items: center; gap: 8px; padding: 10px 8px 8px; border-top: 1px solid rgba(255,255,255,.06); }
+.ambient-play-btn { display: flex; align-items: center; gap: 4px; padding: 6px 12px; border: none; border-radius: 6px; background: rgba(39,54,74,.7); color: var(--ink); cursor: pointer; font-size: 12px; }
+.ambient-play-btn:hover { background: rgba(59,79,104,.8); }
+.ambient-volume { display: flex; align-items: center; gap: 6px; flex: 1; color: var(--muted); }
+.ambient-volume input[type=range] { flex: 1; accent-color: #3478e5; height: 4px; }

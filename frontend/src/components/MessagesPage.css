@@ -1,0 +1,65 @@
+.messages-page { display: flex; height: calc(100vh - 44px - 40px); background: var(--bg-body); color: var(--text-main); overflow: hidden; }
+.messages-sidebar { width: 320px; flex-shrink: 0; border-right: 1px solid var(--glass-border); display: flex; flex-direction: column; background: var(--bg-card); }
+.messages-sidebar-header { padding: 16px 14px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--glass-border); flex-shrink: 0; }
+.messages-sidebar-header h2 { margin: 0; font-size: 1rem; }
+.messages-unread-badge { background: var(--danger); color: var(--ink); font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 700; }
+.messages-conv-list { flex: 1; overflow-y: auto; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.08) transparent; }
+.messages-conv-list::-webkit-scrollbar { width: 4px; }
+.messages-conv-list::-webkit-scrollbar-track { background: transparent; }
+.messages-conv-list::-webkit-scrollbar-thumb { background: rgba(255,255,255,.1); border-radius: 4px; }
+.messages-empty { padding: 40px 20px; color: var(--text-muted); font-size: 0.85rem; text-align: center; }
+.messages-conv-row { width: 100%; display: flex; align-items: center; gap: 10px; padding: 12px 14px; border: none; border-bottom: 1px solid var(--glass-border); background: transparent; color: var(--text-main); cursor: pointer; text-align: left; }
+.messages-conv-row:hover { background: rgba(255,255,255,.04); }
+.messages-conv-row.active { background: rgba(99,102,241,.08); border-left: 3px solid var(--primary); padding-left: 11px; }
+.messages-conv-avatar img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.messages-conv-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--bg-body); display: grid; place-items: center; flex-shrink: 0; color: var(--text-muted); font-weight: 700; font-size: 14px; }
+.messages-conv-info { flex: 1; min-width: 0; }
+.messages-conv-info strong { display: block; font-size: 0.85rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.messages-conv-info small { display: block; color: var(--text-muted); font-size: 0.75rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 2px; }
+.messages-unread-count { background: var(--primary); color: var(--ink); font-size: 11px; padding: 2px 7px; border-radius: 10px; font-weight: 700; }
+.messages-main { flex: 1; display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+.messages-placeholder { flex: 1; display: grid; place-items: center; color: var(--text-muted); gap: 12px; padding: 40px; }
+.messages-placeholder svg { width: 56px; height: 56px; opacity: 0.3; }
+.messages-placeholder p { font-size: 0.9rem; margin: 0; }
+.messages-header { padding: 12px 14px; border-bottom: 1px solid var(--glass-border); display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.messages-back { width: 32px; height: 32px; padding: 0; display: grid; place-items: center; background: transparent; border: none; color: var(--text-muted); cursor: pointer; border-radius: 50%; flex-shrink: 0; }
+.messages-back:hover { background: rgba(255,255,255,.06); color: var(--text-main); }
+.messages-header-user { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0; }
+.messages-header-user .messages-conv-avatar { width: 32px; height: 32px; }
+.messages-header-user .messages-conv-avatar svg { width: 16px; height: 16px; }
+.messages-header-user strong { font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.messages-list { flex: 1; overflow-y: auto; display: flex; flex-direction: column; padding: 10px 14px; gap: 4px; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.08) transparent; }
+.messages-list::-webkit-scrollbar { width: 4px; }
+.messages-list::-webkit-scrollbar-track { background: transparent; }
+.messages-list::-webkit-scrollbar-thumb { background: rgba(255,255,255,.1); border-radius: 4px; }
+.messages-load-more { display: flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid var(--glass-border); border-radius: var(--radius-sm); background: transparent; color: var(--text-muted); cursor: pointer; font-size: 0.8rem; align-self: center; flex-shrink: 0; }
+.messages-load-more:hover { background: var(--bg-card-hover); color: var(--text-main); }
+.messages-bubble { max-width: 80%; min-width: 80px; padding: 8px 12px; border-radius: 12px; font-size: 0.85rem; line-height: 1.45; word-wrap: break-word; flex-shrink: 0; }
+.messages-bubble.mine { align-self: flex-end; background: var(--primary); color: var(--ink); border-bottom-right-radius: 4px; }
+.messages-bubble.theirs { align-self: flex-start; background: var(--bg-card); border: 1px solid var(--glass-border); border-bottom-left-radius: 4px; }
+.messages-bubble time { display: block; margin-top: 4px; font-size: 0.65rem; opacity: .65; }
+.messages-input-area { display: flex; gap: 8px; padding: 10px 14px; border-top: 1px solid var(--glass-border); flex-shrink: 0; background: var(--bg-card); }
+.messages-input-area textarea { flex: 1; min-height: 40px; max-height: 120px; border: 1px solid var(--glass-border); border-radius: var(--radius-sm); background: var(--bg-body); color: var(--text-main); padding: 8px 12px; resize: none; font-family: inherit; font-size: 0.85rem; box-sizing: border-box; }
+.messages-input-area textarea:focus { outline: none; border-color: var(--primary); }
+.messages-input-area button { background: var(--primary); color: var(--ink); padding: 0 20px; height: 40px; border-radius: var(--radius-sm); flex-shrink: 0; border: none; cursor: pointer; }
+.messages-input-area button:hover { background: var(--primary-hover); }
+.messages-input-area button:disabled { opacity: .5; cursor: not-allowed; }
+@media (max-width: 760px) {
+  .messages-sidebar { width: 100%; border-right: none; }
+  .messages-sidebar.mobile-hide { display: none; }
+  .messages-main.mobile-show { display: flex; }
+  .messages-header { display: flex; }
+  .messages-placeholder { display: none; }
+}
+
+body .messages-page { height:calc(100dvh - 112px); min-height:420px; }
+.messages-sidebar-header { flex-wrap:wrap; }
+.messages-sidebar-header h1 { font-size:18px; margin:0; }
+.message-search { padding:12px; font-size:13px; }
+.messages-placeholder { display:flex; flex-direction:column; justify-content:center; }
+@media(max-width:760px) {
+ body .messages-page { height:calc(100dvh - 96px); min-height:0; }
+ .messages-page .messages-main { display:none; }
+ .messages-page .messages-main.mobile-show { display:flex; width:100%; }
+ .messages-page .messages-sidebar.mobile-hide { display:none; }
+}

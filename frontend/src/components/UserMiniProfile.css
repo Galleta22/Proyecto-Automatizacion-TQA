@@ -1,0 +1,31 @@
+.mini-profile-backdrop { position: fixed; inset: 0; z-index: 99999; display: grid; place-items: center; background: rgba(0,0,0,.5); }
+.mini-profile-card { position: relative; background: #0f1a2b; border: 1px solid #2f3c50; border-radius: 14px; padding: 24px; min-width: 300px; max-width: 360px; box-shadow: 0 8px 40px rgba(0,0,0,.5); }
+.mini-profile-close { position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,.06); border: none; border-radius: 6px; color: var(--muted); cursor: pointer; padding: 4px; display: grid; place-items: center; }
+.mini-profile-close:hover { color: var(--ink); background: rgba(255,255,255,.12); }
+.mini-profile-loading, .mini-profile-error { text-align: center; color: var(--muted); padding: 20px; font-size: 13px; }
+.mini-profile-error { color: #ef4444; }
+.mini-profile-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.mini-profile-avatar { position: relative; width: 48px; height: 48px; border-radius: 50%; overflow: hidden; background: #162438; flex-shrink: 0; display: grid; place-items: center; }
+.mini-profile-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.mini-profile-avatar svg { width: 24px; height: 24px; color: var(--muted); }
+.mini-profile-tutor-badge { position: absolute; bottom: -2px; right: -2px; background: #0f1a2b; border-radius: 50%; padding: 2px; display: grid; place-items: center; }
+.mini-profile-tutor-badge svg { width: 16px; height: 16px; color: #22c55e; }
+.mini-profile-info { flex: 1; min-width: 0; }
+.mini-profile-info strong { display: block; color: var(--ink); font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mini-profile-info small { color: var(--muted); font-size: 12px; }
+.mini-profile-follow { width: 34px; height: 34px; border-radius: 50%; border: none; background: #1e3a5f; color: #8fc9ff; cursor: pointer; display: grid; place-items: center; flex-shrink: 0; }
+.mini-profile-follow:hover { background: #2a4f7a; }
+.mini-profile-follow.following { background: #1a2e44; color: var(--muted); }
+.mini-profile-follow.following:hover { background: #3b1f1f; color: #ef4444; }
+.mini-profile-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+.mini-profile-message { width: 34px; height: 34px; border-radius: 50%; border: 1px solid #2f3c50; background: transparent; color: var(--muted); cursor: pointer; display: grid; place-items: center; flex-shrink: 0; }
+.mini-profile-message:hover { border-color: #5a7a9a; color: var(--ink); }
+.mini-profile-message svg { width: 15px; }
+.mini-profile-bio { color: var(--ink); font-size: 12px; line-height: 1.5; margin: 0 0 12px; }
+.mini-profile-stats { display: flex; gap: 14px; margin-bottom: 10px; }
+.mini-profile-stats span { display: flex; align-items: center; gap: 4px; color: var(--muted); font-size: 11px; }
+.mini-profile-stats svg { width: 14px; height: 14px; }
+.mini-profile-genres { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 14px; }
+.mini-profile-genres span { background: #162438; border: 1px solid #2f3c50; border-radius: 4px; padding: 2px 8px; color: #8fc9ff; font-size: 10px; }
+.mini-profile-link { display: block; text-align: center; background: #1e3a5f; color: #8fc9ff; text-decoration: none; border-radius: 8px; padding: 8px; font-size: 12px; }
+.mini-profile-link:hover { background: #2a4f7a; }

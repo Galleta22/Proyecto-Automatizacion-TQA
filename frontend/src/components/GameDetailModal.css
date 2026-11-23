@@ -1,0 +1,463 @@
+.game-detail-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  padding: clamp(24px, 5vh, 56px) clamp(20px, 5vw, 72px);
+  box-sizing: border-box;
+  background: rgba(4, 10, 18, .82);
+  backdrop-filter: blur(7px);
+  cursor: pointer;
+}
+
+.game-detail-modal {
+  position: relative;
+  width: min(1120px, 100%) !important;
+  height: min(760px, calc(100dvh - clamp(48px, 10vh, 112px))) !important;
+  max-width: none !important;
+  padding: 0 !important;
+  overflow: hidden;
+  background: var(--surface) !important;
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 8px !important;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .55);
+  cursor: default;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(340px, .85fr);
+  height: 100%;
+  min-height: 0;
+}
+
+.detail-image-container {
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #05070b;
+  background-size: cover;
+  background-position: center;
+}
+
+.detail-image-blur-overlay {
+  position: absolute;
+  inset: -24px;
+  z-index: 1;
+  background: rgba(0, 0, 0, .48);
+  backdrop-filter: blur(22px);
+}
+
+.detail-image {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 24px rgba(0, 0, 0, .5));
+}
+
+.detail-info {
+  min-width: 0;
+  min-height: 0;
+  padding: clamp(24px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  background: var(--surface);
+  scrollbar-gutter: stable;
+}
+
+.detail-info h2 {
+  max-width: calc(100% - 44px);
+  margin: 0;
+  color: var(--ink);
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.badges {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.game-rating-panel {
+  padding: 13px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  border: 1px solid var(--border);
+  background: var(--surface-raised);
+}
+
+.game-rating-panel > div:first-child strong,
+.game-rating-panel > div:first-child span {
+  display: block;
+}
+
+.game-rating-panel > div:first-child strong {
+  color: var(--accent-ink);
+  font-size: 20px;
+}
+
+.game-rating-panel > div:first-child span,
+.game-rating-panel > small {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.rating-controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.rating-controls button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+}
+
+.rating-controls button:hover,
+.rating-controls button.active {
+  color: var(--accent-ink);
+}
+
+.rating-controls button.active svg {
+  fill: currentColor;
+}
+
+.rating-controls button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.rating-controls .clear-rating {
+  margin-left: 6px;
+  color: var(--danger-ink);
+}
+
+.rating-controls .clear-rating svg {
+  width: 16px;
+  height: 16px;
+}
+
+.badge-complexity,
+.badge-time,
+.badge-players {
+  min-height: 34px;
+  padding: 7px 11px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  background: var(--surface-raised);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.detail-description h3 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.detail-description p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: left;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.game-tips-section {
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.game-tips-heading,
+.game-tips-heading > div,
+.tip-form-footer,
+.tip-item-meta,
+.tip-item-actions {
+  display: flex;
+  align-items: center;
+}
+
+.game-tips-heading {
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.game-tips-heading > div {
+  min-width: 0;
+  gap: 8px;
+  color: var(--accent-ink);
+}
+
+.game-tips-heading svg {
+  flex: 0 0 auto;
+}
+
+.game-tips-heading h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.tip-add-button,
+.tip-save-button {
+  min-height: 34px;
+  padding: 7px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface-raised);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tip-add-button svg,
+.tip-save-button svg {
+  width: 15px;
+  height: 15px;
+}
+
+.tip-form {
+  margin-top: 14px;
+  padding: 12px;
+  display: grid;
+  gap: 9px;
+  border-left: 3px solid var(--accent-ink);
+  background: var(--surface-raised);
+}
+
+.tip-form select,
+.tip-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--control);
+  color: var(--ink);
+  font: inherit;
+}
+
+.tip-form select {
+  min-height: 38px;
+  padding: 0 10px;
+}
+
+.tip-form textarea {
+  min-height: 96px;
+  padding: 10px;
+  resize: vertical;
+  line-height: 1.45;
+}
+
+.tip-form-footer {
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.tip-form-footer > span {
+  margin-right: auto;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.tip-icon-button,
+.tip-item-actions button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--muted);
+}
+
+.tip-icon-button svg,
+.tip-item-actions svg {
+  width: 15px;
+  height: 15px;
+}
+
+.tips-list {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.tip-item {
+  padding: 11px 12px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
+  background: var(--control);
+}
+
+.tip-item.tip-getting_started { border-left-color: var(--accent-ink); }
+.tip-item.tip-important_rule { border-left-color: var(--danger-ink); }
+.tip-item.tip-confusing_rule { border-left-color: var(--accent-ink); }
+.tip-item.tip-strategy { border-left-color: var(--success-ink); }
+
+.tip-item-meta {
+  min-height: 24px;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.tip-category {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.tip-item-actions {
+  margin-left: auto;
+  gap: 4px;
+}
+
+.tip-item-actions button {
+  width: 26px;
+  height: 26px;
+  border: 0;
+}
+
+.tip-item-actions button:hover,
+.tip-icon-button:hover {
+  color: var(--ink);
+  background: var(--surface-raised);
+}
+
+.tip-item p {
+  margin: 7px 0 0;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.tips-empty {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.detail-actions {
+  margin-top: auto;
+  padding-top: 18px;
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--border);
+}
+
+.detail-actions button {
+  min-width: 110px;
+  flex: 1;
+  white-space: nowrap;
+}
+
+.detail-guest-message {
+  margin: 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.game-detail-modal .close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 50%;
+  background: rgba(5, 8, 14, .78);
+  color: var(--ink);
+  font-size: 25px;
+  line-height: 1;
+}
+
+.game-detail-modal .close-btn:hover {
+  background: white;
+  color: #111827;
+}
+
+@media (max-width: 900px) {
+  .game-detail-overlay {
+    padding: 18px;
+  }
+
+  .game-detail-modal {
+    height: calc(100dvh - 36px) !important;
+  }
+
+  .detail-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(220px, 43%) minmax(0, 57%);
+  }
+
+  .detail-info {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 520px) {
+  .game-detail-overlay {
+    padding: 10px;
+  }
+
+  .game-detail-modal {
+    width: 100% !important;
+    height: calc(100dvh - 20px) !important;
+  }
+
+  .detail-layout {
+    grid-template-rows: minmax(180px, 38%) minmax(0, 62%);
+  }
+
+  .detail-info {
+    padding: 18px;
+    gap: 15px;
+  }
+
+  .detail-info h2 {
+    font-size: 26px;
+  }
+
+  .detail-actions button {
+    min-width: calc(50% - 5px);
+  }
+}

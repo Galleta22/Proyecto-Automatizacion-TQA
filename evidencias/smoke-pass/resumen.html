@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ludisist QA · Resultados de Smoke</title>
+<style>
+body{font:1rem/1.55 system-ui,sans-serif;color:#182e40;background:#f2f5f8;margin:0;padding:clamp(1rem,4vw,3rem);overflow-wrap:anywhere}
+main{max-width:68rem;margin:auto}
+h1,h2,h3,h4{line-height:1.25} h1{font-size:clamp(1.75rem,4vw,2.5rem);margin:.25rem 0}
+section{margin-top:2rem} article{background:white;border:1px solid #a7b7c4;border-radius:.75rem;padding:1.25rem;margin:1rem 0}
+article h3{margin-top:0} .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:.75rem}
+.grid div{background:#e7eef4;border-radius:.5rem;padding:.7rem .85rem;min-width:0}
+.counts{grid-template-columns:repeat(auto-fit,minmax(min(100%,6rem),1fr))}
+dt,small{color:#4b6173} dd{margin:0;font-weight:600} .counts dd{font-size:1.35rem}
+.table{overflow-x:auto} table{border-collapse:collapse;background:white;width:100%}
+th,td{text-align:left;vertical-align:top;padding:.7rem;border:1px solid #a7b7c4} thead th{background:#e7eef4}
+.badge{display:inline-block;font-weight:750;padding:.1rem .5rem;border-radius:.4rem;background:#e7eef4;white-space:nowrap}
+.badge[data-state="PASS"]{color:#126242} .badge[data-state="FAIL"],.badge[data-state="NOT RUN"]{color:#a12636}
+aside{border-left:3px solid #a12636;padding:.6rem .85rem;background:#f2f5f8}
+aside p,li p{margin:.25rem 0} li + li{margin-top:.6rem}
+a{color:#175c86} :focus-visible{outline:3px solid #216b9a;outline-offset:2px}
+</style></head><body><main>
+<header><span>Ludisist QA</span><h1>Resultados de Smoke</h1><p>Resultado global <span class="badge" data-state="PASS">PASS</span></p></header>
+<section><h2>Resumen</h2><dl class="grid counts"><div><dt>Total</dt><dd>1</dd></div><div><dt>PASS</dt><dd>1</dd></div><div><dt>FAIL</dt><dd>0</dd></div><div><dt>SKIPPED</dt><dd>0</dd></div><div><dt>NOT RUN</dt><dd>0</dd></div></dl><p>100,0 % de los casos seleccionados obtuvo PASS.</p></section>
+<section><h2>Datos de la ejecución</h2><dl class="grid"><div><dt>Tipo de prueba</dt><dd>Funcional</dd></div><div><dt>Ambiente</dt><dd>Instancia local de pruebas</dd></div><div><dt>Inicio (Bolivia)</dt><dd>23/11/2026 16:54:18</dd></div><div><dt>Fin (Bolivia)</dt><dd>23/11/2026 16:54:21</dd></div><div><dt>Duración</dt><dd>2.994 s</dd></div><div><dt>Destinatario</dt><dd>qa@example.com</dd></div><div><dt>ID de ejecución</dt><dd>8377706c161e4153b77250bd82a9eb93</dd></div><div><dt>Modalidad</dt><dd>Normal</dd></div></dl></section>
+<section><h2>Casos de prueba</h2>
+<div class="table"><table><thead><tr><th scope="col">ID</th><th scope="col">Caso</th><th scope="col">Estado</th><th scope="col">Duración</th><th scope="col">Observación</th></tr></thead><tbody><tr><th scope="row"><a href="#caso-1">TC-SMK-001</a></th><td>Inicio de sesión válido</td><td><span class="badge" data-state="PASS">PASS</span></td><td>2.985 s</td><td>Sin observaciones.</td></tr></tbody></table></div>
+</section><section><h2>Detalle por caso</h2>
+<article id="caso-1">
+<h3>TC-SMK-001 · Inicio de sesión válido</h3><p><span class="badge" data-state="PASS">PASS</span> · 2.985 s</p>
+<dl class="grid"><div><dt>Resultado esperado</dt><dd>La sesión permite abrir la pantalla Mi cuenta y privacidad.</dd></div><div><dt>Observación</dt><dd>Sin observaciones.</dd></div><div><dt>Datos de prueba</dt><dd>Cuenta verificada de jugador QA.</dd></div></dl>
+<h4>Pasos ejecutados</h4><ol><li><strong>Abrir el formulario de inicio de sesión</strong><small>Captura disponible en el PDF adjunto.</small></li><li><strong>Enviar las credenciales de la cuenta de prueba</strong><p>HTTP 200 y regreso a Inicio.</p></li><li><strong>Verificar el acceso a la pantalla protegida de cuenta</strong><p>La sesión permite abrir la pantalla Mi cuenta y privacidad.</p><small>Captura disponible en el PDF adjunto.</small></li></ol>
+</article></section>
+</main></body></html>

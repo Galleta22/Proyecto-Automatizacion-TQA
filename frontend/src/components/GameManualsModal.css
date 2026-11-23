@@ -1,0 +1,173 @@
+.game-manuals-modal {
+    max-width: 720px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-manuals-modal .modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 1.25rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.game-manuals-modal .modal-close:hover {
+    color: var(--ink);
+}
+
+.manuals-header {
+    text-align: center;
+    padding: 1.5rem 1rem 0.5rem;
+}
+
+.manuals-header svg {
+    font-size: 2.5rem;
+    color: var(--accent-ink);
+    margin-bottom: 0.5rem;
+}
+
+.manuals-header h2 {
+    color: var(--ink);
+    font-size: 1.4rem;
+    margin: 0 0 0.25rem;
+}
+
+.manuals-subtitle {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.manuals-loading {
+    text-align: center;
+    color: var(--muted);
+    padding: 2rem;
+}
+
+.manuals-empty {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--muted);
+}
+
+.manuals-empty svg {
+    font-size: 2.5rem;
+    color: #475569;
+    margin-bottom: 0.75rem;
+}
+
+.manuals-empty h3 {
+    color: var(--ink);
+    margin: 0 0 0.5rem;
+}
+
+.manuals-empty p {
+    margin: 0 0 1rem;
+}
+
+.manuals-list {
+    overflow-y: auto;
+    padding: 0.75rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.manual-entry {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: var(--surface);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.manual-entry:hover {
+    background: var(--surface);
+}
+
+.manual-entry svg {
+    font-size: 1.5rem;
+    color: var(--accent-ink);
+    flex-shrink: 0;
+}
+
+.manual-entry-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.manual-entry-info strong {
+    display: block;
+    color: var(--ink);
+    font-size: 0.95rem;
+    margin-bottom: 0.15rem;
+}
+
+.manual-entry-info span {
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.manual-entry .btn-sm {
+    flex-shrink: 0;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+}
+
+.manuals-pdf-viewer {
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+}
+
+.manuals-pdf-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.manuals-pdf-header h3 {
+    flex: 1;
+    color: var(--ink);
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+.manuals-pdf-frame {
+    flex: 1;
+    border: none;
+    width: 100%;
+}
+
+.manuals-pdf-loading,
+.manuals-pdf-error {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: var(--muted);
+    padding: 2rem;
+}
+
+.manuals-pdf-error svg {
+    font-size: 2.5rem;
+    color: #ef4444;
+    margin-bottom: 0.75rem;
+}
+
+.manuals-pdf-error p {
+    margin: 0 0 1rem;
+}

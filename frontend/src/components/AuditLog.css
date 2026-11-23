@@ -1,0 +1,8 @@
+.audit-log-container { min-width: 0; }
+.audit-records { min-width: 620px; }
+.audit-records :is(th, td) { overflow-wrap: anywhere; }
+.audit-summary summary {
+    color: var(--accent-ink);
+    cursor: pointer;
+}
+.audit-summary { margin-top: 24px; }

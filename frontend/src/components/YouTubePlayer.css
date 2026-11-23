@@ -1,0 +1,11 @@
+.youtube-input-group { display: flex; gap: 6px; padding: 8px; }
+.youtube-input-group input { flex: 1; background: rgba(22,36,56,.6); border: 1px solid #2f3c50; border-radius: 6px; padding: 8px 10px; color: var(--ink); font-size: 12px; outline: none; }
+.youtube-input-group input:focus { border-color: #ff4444; }
+.youtube-input-group button { background: #ff4444; border: none; border-radius: 6px; padding: 8px 12px; color: var(--ink); font-size: 12px; cursor: pointer; }
+.youtube-input-group button:hover { background: #cc3333; }
+.youtube-player-box { border-radius: 8px; overflow: hidden; margin: 8px; }
+.youtube-player-box iframe { border-radius: 8px; display: block; }
+.youtube-error { display: block; color: #ff6666; font-size: 11px; padding: 0 8px 4px; }
+.youtube-controls { display: flex; gap: 6px; padding: 8px; border-top: 1px solid rgba(255,255,255,.06); }
+.youtube-controls button { display: flex; align-items: center; gap: 4px; background: rgba(39,54,74,.7); border: none; border-radius: 6px; padding: 6px 10px; color: var(--ink); font-size: 11px; cursor: pointer; }
+.youtube-controls button:hover { background: rgba(59,79,104,.8); }
